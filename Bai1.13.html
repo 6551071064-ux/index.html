@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Tạo form và các điều khiển
+    </title>
+
+</head>
+
+
+<body>
+
+<form id="frmDuLich">
+
+    <table
+        border="1"
+        cellpadding="4"
+        cellspacing="0"
+        align="center"
+        width="650"
+        style="
+            border-collapse: collapse;
+            background-color: #FFFFCC;
+            color: #336666;
+        "
+    >
+
+
+        <!-- Tiêu đề -->
+
+        <tr>
+
+            <td
+                colspan="2"
+                align="center"
+                style="
+                    color: #336699;
+                    font-size: 26px;
+                    font-weight: bold;
+                "
+            >
+                Đăng ký du lịch
+            </td>
+
+        </tr>
+
+
+        <!-- Họ tên -->
+
+        <tr>
+
+            <td width="150">
+                Họ và tên
+            </td>
+
+            <td>
+
+                <input
+                    type="text"
+                    id="txtHoTen"
+                    size="40"
+                    value="Phạm Ngọc Cẩm Đào"
+                >
+
+            </td>
+
+        </tr>
+
+
+        <!-- Địa chỉ -->
+
+        <tr>
+
+            <td>
+                Địa chỉ
+            </td>
+
+            <td>
+
+                <input
+                    type="text"
+                    id="txtDiaChi"
+                    size="35"
+                    value="227 Nguyễn Văn Cừ"
+                >
+
+            </td>
+
+        </tr>
+
+
+        <!-- Điện thoại -->
+
+        <tr>
+
+            <td>
+                Điện thoại
+            </td>
+
+            <td>
+
+                <input
+                    type="text"
+                    id="txtDienThoai"
+                    value="8351065"
+                >
+
+            </td>
+
+        </tr>
+
+
+        <!-- Khách Việt Nam -->
+
+        <tr>
+
+            <td>
+                Khách Việt Nam
+            </td>
+
+            <td>
+
+                <input
+                    type="checkbox"
+                    id="chkVietNam"
+                    checked
+                >
+
+            </td>
+
+        </tr>
+
+
+        <!-- Chọn tour -->
+
+        <tr>
+
+            <td>
+                Chọn tour
+            </td>
+
+            <td>
+
+                <select id="chonTour">
+
+                    <optgroup label="Miền Bắc">
+
+                        <option>
+                            Hà Nội - Hạ Long - Sapa
+                        </option>
+
+                        <option>
+                            Hà Nội - Chùa Hương - Ninh Bình
+                        </option>
+
+                        <option>
+                            Hà Nội - Cát Bà - Tuần Châu
+                        </option>
+
+                    </optgroup>
+
+
+                    <optgroup label="Miền Trung">
+
+                        <option>
+                            Huế - Bạch Mã - Đà Nẵng
+                        </option>
+
+                        <option>
+                            Nha Trang - Đà Lạt
+                        </option>
+
+                        <option selected>
+                            Buôn mê thuột - Gia Lai - Kontum
+                        </option>
+
+                    </optgroup>
+
+
+                    <optgroup label="Miền Nam">
+
+                        <option>
+                            TP HCM - Cần Thơ - Cà Mau
+                        </option>
+
+                        <option>
+                            TP HCM - Mỹ Tho
+                        </option>
+
+                    </optgroup>
+
+                </select>
+
+            </td>
+
+        </tr>
+
+
+        <!-- Phương tiện -->
+
+        <tr>
+
+            <td>
+                Phương tiện
+            </td>
+
+            <td>
+
+                <input
+                    type="radio"
+                    name="phuongTien"
+                    value="Máy bay"
+                    checked
+                >
+                Máy bay
+
+
+                <input
+                    type="radio"
+                    name="phuongTien"
+                    value="Xe ô tô"
+                >
+                Xe ô tô
+
+            </td>
+
+        </tr>
+
+
+        <!-- Số lượng đoàn khách -->
+
+        <tr>
+
+            <td colspan="2" align="center">
+
+                <fieldset
+                    style="
+                        border: 2px solid #CC6600;
+                        width: 350px;
+                        margin: auto;
+                    "
+                >
+
+                    <legend
+                        style="
+                            color: #CC6600;
+                            font-style: italic;
+                        "
+                    >
+                        Số lượng đoàn khách
+                    </legend>
+
+
+                    Người lớn
+
+                    <input
+                        type="text"
+                        id="txtNguoiLon"
+                        size="5"
+                        value="6"
+                    >
+
+
+                    &nbsp;&nbsp;
+
+
+                    Trẻ em
+
+                    <input
+                        type="text"
+                        id="txtTreEm"
+                        size="5"
+                        value="4"
+                    >
+
+                </fieldset>
+
+            </td>
+
+        </tr>
+
+
+        <!-- Ghi chú thêm -->
+
+        <tr>
+
+            <td>
+                Ghi chú thêm
+            </td>
+
+            <td>
+
+                <textarea
+                    id="txtGhiChu"
+                    rows="3"
+                    style="width: 300px;"
+                >Có 2 trẻ em dưới 6 tuổi.
+Có 2 người ăn chay</textarea>
+
+            </td>
+
+        </tr>
+
+
+        <!-- Đồng ý -->
+
+        <tr>
+
+            <td colspan="2" align="center">
+
+                <input
+                    type="button"
+                    value="Đồng ý"
+                    onclick="dangKyDuLich()"
+                >
+
+            </td>
+
+        </tr>
+
+
+        <!-- Thông báo -->
+
+        <tr>
+
+            <td colspan="2">
+
+                <div
+                    id="lblThongBao"
+                    style="
+                        text-align: center;
+                        color: #FF6600;
+                        font-weight: bold;
+                    "
+                ></div>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</form>
+
+
+<script>
+
+    function dangKyDuLich() {
+
+        document.getElementById("lblThongBao").innerText =
+            "Bạn đã đăng ký thành công!!!";
+
+    }
+
+</script>
+
+</body>
+</html>
